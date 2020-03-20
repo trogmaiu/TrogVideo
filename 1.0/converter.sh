@@ -1,0 +1,1 @@
+ffmpeg -i uploads/trogvideo58explicacaocont.mp4 uploads/explicacaocont.mp4

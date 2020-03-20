@@ -1,0 +1,13 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title> ENVIO</title>
+</head>
+<body>
+<form method="post" action="upload2.php" enctype="multipart/form-data">
+<input type="file" name="arquivo" />
+<input type="submit" value="enviar" />
+</form>
+
+</body>
+</html>
