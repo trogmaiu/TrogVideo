@@ -38,9 +38,10 @@ $arquivo_texto = fopen('converter.sh','w');
 //fwrite($arquivo_texto, "#!/bin/bash \r\n");
 fwrite($arquivo_texto,"ffmpeg -i $dir$nome$seg$nome_arquivo $dir$nome_diminuido.mp4");
 fclose($arquivo_texto);
+}
 else
   echo("Baixou o  arquivo agora é só converter");
-}
+
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ?>
 <BR>
