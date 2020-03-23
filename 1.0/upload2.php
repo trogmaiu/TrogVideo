@@ -40,7 +40,7 @@ fwrite($arquivo_texto,"ffmpeg -i $dir$nome$seg$nome_arquivo $dir$nome_diminuido.
 fclose($arquivo_texto);
 }
 else
-  echo("Baixou o  arquivo agora é só converter");
+  echo("Problema");
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ?>
