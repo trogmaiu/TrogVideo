@@ -1,4 +1,8 @@
 <?php
+/* Sera colocado identificao das extencoes. 
+Talvez possa ainda virar quase um servidor de arquivos, 
+por extencao secreta. Um addon.
+*/
 
 if(isset($_FILES['arquivo'])) {
 $dir = 'uploads/'; 
@@ -34,10 +38,11 @@ $arquivo_texto = fopen('converter.sh','w');
 //fwrite($arquivo_texto, "#!/bin/bash \r\n");
 fwrite($arquivo_texto,"ffmpeg -i $dir$nome$seg$nome_arquivo $dir$nome_diminuido.mp4");
 fclose($arquivo_texto);
-echo("Baixou o  arquivo agora é só converter");
+else
+  echo("Baixou o  arquivo agora é só converter");
 }
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ?>
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 <BR>
 <BR>
 <BR>
@@ -45,10 +50,11 @@ echo("Baixou o  arquivo agora é só converter");
 <form action="upload2.php" method="GET">
 <input type="submit" name="VAI"  value="Converter">
 </form>
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 <?php
 
-if(isset($_GET['VAI']))
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  if(isset($_GET['VAI']))
 {
 
 exec('/var/www/trogsearch/public_html/converter.sh');
