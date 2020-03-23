@@ -3,8 +3,8 @@
 Talvez possa ainda virar quase um servidor de arquivos, 
 por extencao secreta. Um addon.
 */
-
-if(isset($_FILES['arquivo'])) {
+// E claro isset.!!!
+if(isset($_FILES['arquivo']['name')) {
 $dir = 'uploads/'; 
 $nome = 'trogvideo';
 //$extencao = strtolower(substr($_FILES['arquivo']['name'], -4));
