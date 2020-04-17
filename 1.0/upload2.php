@@ -11,7 +11,7 @@ if(isset($_FILES['arquivo']['name')) {
     $nome_real_quantidade = strlen($_FILES['arquivo']['name']);
    $quantidade = $nome_real_quantidade - 4;
    $nome_diminuido = strtolower(substr($_FILES['arquivo']['name'], 0, $quantidade));
-   $passar = fopen('1.txt', 'w');
+   $passar = fopen('temp/1.txt', 'w');
    fwrite($passar, "$dir$nome_diminuido.mp4" );
    fclose($passar);
     //Converte para minusculas
